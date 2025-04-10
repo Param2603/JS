@@ -36,12 +36,47 @@ console.log(paramData)
 let dhruvData =  createReportCard ("Dhruv",85,"accounts")
 console.log(dhruvData)
 
-// Car Rental Service:
+// Q-3: Car Rental Service:
 // Question: Suppose you run a car rental service. Write a factory function createCar that creates a car object with properties like model, rentalRate, and availability. Use this to generate car instances for each vehicle in your fleet. Hint: Each car will have different values for these properties, so use a function that takes parameters for each property.
 
 function createCar (model,rentalRate,availability){
     let car = {}
     car.model = model;
-    car.rentalRate =rentalRate;
+    car.rentalRate = rentalRate;
     car.availability = availability;
+
+    return car;
+}
+console.log("Q-3 Output")
+
+let audi = createCar ("Audi",35000,"2015")
+console.log(audi)
+
+let BMW = createCar ("BMW",40000,"2016")
+console.log(BMW)
+
+// Q-4: Library Book Generator:
+// Question: Create a factory function createBook that generates a book object with properties such as title, author, ISBN, and availableCopies. Use this function to add books to a library inventory. Hint: Each book should have unique details, so think about how to pass these as arguments to the function.
+
+function createBook (title,author,ISBN,availableCopies){
+    let book = {}
+    book.title = title;
+    book.author = author;
+    book.ISBN = ISBN;
+    book.availableCopies = availableCopies;
+
+    return book;
+}
+
+let book1 = createBook("War and Peace","Leo Tolstoy","978-0-06-112008-4",50)
+console.log(book1)
+
+let book2 = createBook ("!984","George Orwell","978-0-06-112008-4",100)
+console.log(book2)
+
+// Q-5: Employee Badge Creator:
+// Question: Your company needs to generate badges for employees with properties like name, id, department, and position. Write a factory function createEmployeeBadge that returns an employee badge object. Hint: Use parameters in your factory function to create unique badge information for each employee.
+
+function createEmployeeBadge (name, id, department, position){
+    let employee
 }
