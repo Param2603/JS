@@ -67,6 +67,7 @@ function createBook (title,author,ISBN,availableCopies){
 
     return book;
 }
+console.log("Q-4 Output")
 
 let book1 = createBook("War and Peace","Leo Tolstoy","978-0-06-112008-4",50)
 console.log(book1)
@@ -78,5 +79,18 @@ console.log(book2)
 // Question: Your company needs to generate badges for employees with properties like name, id, department, and position. Write a factory function createEmployeeBadge that returns an employee badge object. Hint: Use parameters in your factory function to create unique badge information for each employee.
 
 function createEmployeeBadge (name, id, department, position){
-    let employee
+    let employee = {}
+    employee.name = name;
+    employee.id = id;
+    employee.department = department;
+    employee.position = position;
+
+    return employee
 }
+console.log("Q-5 Output")
+
+let employee1 = createEmployeeBadge("Param",14,"IT","Manager")
+console.log(employee1)
+
+let employee2 = createEmployeeBadge("Arshil",13,"HR","Manager")
+console.log(employee2)
