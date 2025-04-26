@@ -1,34 +1,29 @@
 //  Q - 1  Calculate Total Expenses:
 // A family wants to calculate their weekly expenses. They spent ₹200, ₹150, ₹100, ₹350, and ₹50 over five days. Write a function to calculate the total expense.
 
-function totalSpent(total) {
-    return total
+function weeklySpent(weekly) {
+    return weekly
 }
 
-let totalExpance = [200, 150, 100, 350, 50]
-let total = 0
+let weeklyExpense = [200, 150, 100, 350, 50]
+let weekly = 0
 
-let totalExpance2 = totalExpance.map((num) => {
-    total += num
+let weeklyExpense2 = weeklyExpense.map((num) => {
+    weekly += num
 })
 console.log("Q - 1  : Output")
-console.log("the total expance of family over week = ", total)
+console.log("the total expense of family over week = ", weekly)
 
 // Q-2  Find the Highest Temperature:
 // A weather app shows the temperatures recorded in a city over 7 days as [32, 35, 30, 31, 33, 36, 34]. Write a function to find the highest temperature in the array.
 
-function findHighTemp(temp) {
+function findHighestTemp(temp) {
     return Math.max(...temp)
 }
 
 let temp = [32, 35, 30, 31, 33, 36, 34]
+let tempHigh = findHighestTemp(temp);
 
-let tempHigh = findHighTemp(temp);
-// for(let i=0;i<temp.length;i++){
-//     if(temp [i+1] > temp [i]){
-//       tempHigh = temp[i+1]
-//     }
-// }
 console.log("Q - 2  : output")
 console.log("The highest temperature over 7 day is", tempHigh)
 
@@ -36,11 +31,10 @@ console.log("The highest temperature over 7 day is", tempHigh)
 //  A student got test scores of [56, 72, 48, 90, 65]. Write a function to find the lowest score.
 
 function findLowScore(score) {
-    return Math.min(...score)
+    return Math.min(... score)
 }
 
 let score = [56, 72, 48, 90, 65]
-
 let lowScore = findLowScore(score);
 
 console.log("Q - 3  : output")
@@ -54,7 +48,6 @@ function monthlySalary(totalSalary) {
 
 let salaryOfEmployee = [45000, 55000, 30000, 70000, 60000]
 let totalSalary = 0
-
 
 let monthlySalary1 = salaryOfEmployee.map((num) => {
     totalSalary += num
@@ -138,10 +131,8 @@ console.log("After remove duplicate number from company list", phone)
 // Q - 9 Find Second Largest Sale Amount:
 // A shop recorded sales amounts: [200, 400, 100, 700, 500]. Write a function to find the second-largest sale.
 
-
 let array2 = [200, 400, 100, 700, 500]
 let secondLargest = []
-
 array2.sort((a, b) => b - a)
 
 secondLargest = array2[1]
@@ -167,7 +158,6 @@ console.log("The last product sold is", lastProduct[0])
 let shoppingCart = []
 function checkEmpty(shoppingCart) {
 
-
     if (shoppingCart.length == 0) {
           console.log("Q - 12 : output")
           console.log("Shopping cart is empty")
@@ -176,11 +166,8 @@ function checkEmpty(shoppingCart) {
     else {
           console.log("Q - 12 : output")
           console.log("Shopping cart is not empty")
-
     }
-
-    return shoppingCart.length
-
+   return shoppingCart.length
 }
 console.log(checkEmpty(shoppingCart))
 
@@ -205,7 +192,6 @@ console.log("the Book A Appers in its inventory = ", count)
 // Two classes have student lists: ["Rahul", "Neha"] and ["Aman", "Priya"]. Write a function to merge both lists.
 
 let class1 = ["Rahul", "Neha"]
-
 let class2 = ["Aman", "Priya"]
 
 let classMerge = class1.concat(class2)
@@ -217,7 +203,6 @@ console.log("The merged list of student from both classes = ", classMerge)
 // A list of movies is ["Inception", "Avatar", "Titanic"]. Write a function to find the position of "Avatar" in the list.
 
 let movies = ["Inception", "Avatar", "Titanic"]
-
 let movie = "Avatar"
 
 let position = movies.indexOf(movie)
@@ -241,7 +226,6 @@ console.log("The new prices after applying discount = ", prices1)
 // A sports team scored [10, 50, 30, 20]. Write a function to sort these scores in descending order without using .sort().
 
 let scores = [10, 50, 30, 20]
-
 let scores1 = []
 
 for (let i = 0; i < scores.length; i++) {
@@ -278,36 +262,30 @@ console.log("the third group is :",groupe2)
 
 
 // Q - 18 Rotate the Line of Cars:
-//        A parking lot has cars in a line: ["Car1", "Car2", "Car3", "Car4"]. Write a function to rotate the cars so "Car4" comes to the front.
-
+// A parking lot has cars in a line: ["Car1", "Car2", "Car3", "Car4"]. Write a function to rotate the cars so "Car4" comes to the front.
 
 let cars = ["Car1", "Car2", "Car3", "Car4"]
-
 let lastCar = cars.pop()
 
-
 cars.unshift("Car4")
-console.log("Q -18 : output")
 
+console.log("Q -18 : output")
 console.log("the new line of cars is : ", cars)
 
-
 // Q - 19  Remove Unwanted Values from the List:
-//         A form received some invalid values: [0, "A", "", null, "B", undefined]. Write a function to remove all falsey values (like 0, null, undefined) from the list.
+//  A form received some invalid values: [0, "A", "", null, "B", undefined]. Write a function to remove all falsey values (like 0, null, undefined) from the list.
 
 
 let formValues = [0, "A", "", null, "B", undefined]
 let values = [0,null,undefined]
-// method -- 1
-// let validValues = formValues.filter((value) => Boolean(value))
-// method -- 2
+
 let newValue = formValues.filter((value)=>{
     for(let i=0;i<formValues.length;i++){
           if(formValues[i]==values[0]){
                 return value
           }
     }
-})
+})  
 
 console.log("Q - 19 : output")
 console.log("the valid values from the form are : ",newValue)
