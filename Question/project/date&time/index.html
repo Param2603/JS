@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch</title>
+</head>
+<body>
+  <div id="datetime"></div>
+
+  <script>
+      function updateDateTime() {
+      const now = new Date();
+      const date = now.toLocaleDateString();"<br>"
+      const time = now.toLocaleTimeString();
+
+      document.querySelector("#datetime").innerHTML = `${date} ${time}`;
+      }
+      
+      setInterval(updateDateTime, 1000); 
+      updateDateTime();
+  </script>
+
+  
+</body>
+</html>
