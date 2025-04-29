@@ -1,0 +1,16 @@
+#container{
+    height: 100vh;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+#product{
+    margin-top: 10vmax;
+    margin-left: 10vmin;
+    height: 600px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
