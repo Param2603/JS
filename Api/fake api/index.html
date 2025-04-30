@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake API</title>
+</head>
+<body>
+    <div id="main"></div>
+   
+
+    <script>
+        let main = document.querySelector("#main")
+
+    fetch('https://fakestoreapi.com/products')
+    .then((res) => res.json())
+    .then((res) => {
+        res.forEach(element => {
+            let paragraph = document.createElement("p")
+            paragraph.innerHTML = element.id
+            let paragraph1 = document.createElement("p")
+            paragraph1.innerHTML = element.title
+            let paragraph2 = document.createElement("p")
+            paragraph2.innerHTML = element.price
+            main.append(paragraph,paragraph1,paragraph2
+            )
+        })
+    })
+ console.log(res)
+      
+    </script>
+</body>
+</html>
