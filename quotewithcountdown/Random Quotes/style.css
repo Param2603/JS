@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 35px;
+    color:  red;
+    
+}
+#quote{
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: cursive;
+    color: darkblue;
+    background-color: yellow;
+   }
+
+#btn {
+    background-color:yellowgreen;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
