@@ -6,45 +6,45 @@
         "image": "https://cellbell.in/cdn/shop/files/B08R5GR57J.MAIN.png?v=1734437270&width=990"  
     },
         {
-        "id": 1,
-        "name": "L001 OFFICE CHAIR",
-        "price": 300,
+        "id": 2,
+        "name": "L002 OFFICE CHAIR",
+        "price": 200,
         "image": "https://cellbell.in/cdn/shop/files/B08R5GR57J.MAIN.png?v=1734437270&width=990"  
     },
         {
-        "id": 1,
-        "name": "L001 OFFICE CHAIR",
-        "price": 300,
+        "id": 3,
+        "name": "L003 OFFICE CHAIR",
+        "price": 270,
         "image": "https://cellbell.in/cdn/shop/files/B08R5GR57J.MAIN.png?v=1734437270&width=990"  
     },
            {
-        "id": 1,
-        "name": "L001 OFFICE CHAIR",
-        "price": 300,
+        "id": 4,
+        "name": "L004 OFFICE CHAIR",
+        "price": 250,
         "image": "https://cellbell.in/cdn/shop/files/B08R5GR57J.MAIN.png?v=1734437270&width=990"  
     },
               {
-        "id": 1,
-        "name": "L001 OFFICE CHAIR",
-        "price": 300,
+        "id": 5,
+        "name": "L005 OFFICE CHAIR",
+        "price": 150,
         "image": "https://cellbell.in/cdn/shop/files/B08R5GR57J.MAIN.png?v=1734437270&width=990"  
     },
        {
-        "id": 1,
-        "name": "L001 OFFICE CHAIR",
-        "price": 300,
+        "id": 6,
+        "name": "L006 OFFICE CHAIR",
+        "price": 120,
         "image": "https://cellbell.in/cdn/shop/files/B08R5GR57J.MAIN.png?v=1734437270&width=990"  
     },
        {
-        "id": 1,
-        "name": "L001 OFFICE CHAIR",
-        "price": 300,
+        "id": 7,
+        "name": "L007 OFFICE CHAIR",
+        "price": 100,
         "image": "https://cellbell.in/cdn/shop/files/B08R5GR57J.MAIN.png?v=1734437270&width=990"  
     },
               {
-        "id": 1,
-        "name": "L001 OFFICE CHAIR",
-        "price": 300,
+        "id": 8,
+        "name": "L008 OFFICE CHAIR",
+        "price": 180,
         "image": "https://cellbell.in/cdn/shop/files/B08R5GR57J.MAIN.png?v=1734437270&width=990"  
     }    
 ]
