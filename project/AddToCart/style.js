@@ -19,7 +19,7 @@ const addDataToHTML = () => {
         listProduct.forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.classList.add('item')
-            newProduct.innerHTML = `
+            newProduct.innerHTML = `               (concatane)
                <img src="$(product.image)" alt="">
                 <h2>$(product.name)</h2>
                 <div class="price">$(product.price)</div>
