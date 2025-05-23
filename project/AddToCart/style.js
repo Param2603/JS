@@ -1,40 +1,39 @@
 let iconCart = document.querySelector('.icon-cart');
 let closeCart =  document.querySelector('.close');
 let body = document.querySelector('body');
-let listProduct = document.querySelector('.listProduct');
+let listProductHTML = document.querySelector('.listProduct');
 
 let listProducts = []
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
-
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
 
 const addDataToHTML = () => {
-    listProducts.innerHTML = "";
-    if(listProduct.length > 0){
-        listProduct.forEach(product => {
+    listProductHTML.innerHTML = "";
+    if(listProducts.length > 0){
+        listProducts.forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.classList.add('item')
-            newProduct.innerHTML = `               (concatane)
-               <img src="$(product.image)" alt="">
-                <h2>$(product.name)</h2>
-                <div class="price">$(product.price)</div>
-                <button class="addcart">Add To Cart</button>`;
-                listProduct.appendChild(newProduct);
+            newProduct.innerHTML = `
+            <img src=".//image/image-1.jpeg" alt="">
+                <h2>NAME PRODUCT</h2>
+                <div class="price">₹300</div>
+                <button class="addcart">Add To Cart</button>`;    
+                listProductHTML.appendChild(newProduct)
         })
     }
-
 }
 
 const initApp = () => {
-    fetch('product.json')
+    
+    fetch('products.json')
     .then(response => response.json())
     .then(data => {
-        listProduct = data;
+        listProducts = data;
         addDataToHTML();
     })   
 }
