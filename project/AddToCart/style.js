@@ -2,6 +2,8 @@ let iconCart = document.querySelector('.icon-cart');
 let closeCart =  document.querySelector('.close');
 let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct');
+let button = document.querySelector('.addcart')
+// let icon = querySelector('.icon-cart')
 
 let listProducts = []
 
@@ -12,6 +14,10 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
 
+// addcart.addEventListener('click', () => {
+//     body.classList.toggle('icon-cart')
+// })
+
 const addDataToHTML = () => {
     listProductHTML.innerHTML = "";
     if(listProducts.length > 0){
@@ -20,7 +26,7 @@ const addDataToHTML = () => {
             newProduct.classList.add('item')
             newProduct.innerHTML = `
             <img src=".//image/image-1.jpeg" alt="">
-                <h2>NAME PRODUCT</h2>
+                <h2>Office Chair</h2>
                 <div class="price">₹300</div>
                 <button class="addcart">Add To Cart</button>`;    
                 listProductHTML.appendChild(newProduct)
@@ -28,8 +34,7 @@ const addDataToHTML = () => {
     }
 }
 
-const initApp = () => {
-    
+const initApp = () => { 
     fetch('products.json')
     .then(response => response.json())
     .then(data => {

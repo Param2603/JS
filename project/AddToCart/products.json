@@ -3,7 +3,7 @@
         "id": 1,
         "name": "L001 OFFICE CHAIR",
         "price": 300,
-        "image": ".//image/image-1.jpeg"  
+        "image": "image-1.jpeg"  
     },
         {
         "id": 2,
