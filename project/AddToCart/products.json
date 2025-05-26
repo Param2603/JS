@@ -9,13 +9,13 @@
         "id": 2,
         "name": "L002 OFFICE CHAIR",
         "price": 200,
-        "image": ".//image/image-2.jpeg"  
+        "image": ".//image/image-2.jpeg" 
     },
         {
         "id": 3,
         "name": "L003 OFFICE CHAIR",
         "price": 270,
-        "image": ".//image/image-3.jpeg"  
+        "image": ".//image/image-3.jpeg"
     },
            {
         "id": 4,
