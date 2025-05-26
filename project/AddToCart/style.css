@@ -60,7 +60,7 @@ header .icon-cart span{
     font-size: large;
 }
 .listProduct .item .price{
-    letter-spacing: 7px;
+    letter-spacing: 5px;
     font-size: small;
 }
 .listProduct .item button{
@@ -127,13 +127,14 @@ body.showCart .container{
     border-radius: 50%;
     cursor: pointer;
 }
-.listCart .quantity span:nth-child(2){
+ .listCart .quantity span:nth-child(2){
     background-color: transparent;
     color: #eee;
-}
-.listCart .item:nth-child(even){
-    background-color: #eee1;
-}
+    
+} 
+/* .listCart .item:nth-child(even){
+    background-color: #eee1; */ 
+/* } */
 .listCart{
     overflow: auto;
 }
