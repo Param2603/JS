@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 News</title>
+</head>
+
+<body>
+    <h2 id="title">Title :- Coronavirus News</h2>
+    <div id="main-cont"></div>
+    
+    <script>
+        let main = document.querySelector("#main-cont");
+        let title = document.getElementById("title")
+        title.style.textAlign = "center"
+        title.style.fontSize = "35px"
+      
+        async function showData() {
+            const url = "https://coronavirus-smartable.p.rapidapi.com/news/v1/US/";
+            const options = {
+                method: "GET",
+                headers: {
+                    "x-rapidapi-key": "d26ad10914msh1fe6a248c63b485p147e6djsn02a2d5b9a27e",
+                    "x-rapidapi-host": "coronavirus-smartable.p.rapidapi.com",
+                },
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const result = await response.json();
+                console.log(result);
+
+                result.news.forEach((element) => {
+                     
+                    let div = document.createElement("div")
+                    div.style.border = "2px solid gray"
+                    div.style.display = "flex"
+                    div.style.flexDirection = "column"
+                    div.style.alignItems= "center";
+                    div.style.margin= "30px";
+                    div.style.borderRadius = "20px"
+                    div.innerHTML = "<br>";
+                
+                    let title = document.createElement("h3")
+                    title.innerHTML = `Title :- ${element.title} <br>`
+                    title.style.display = "flex"
+                    title.style.color = "blue"
+                    title.style.fontSize= "20px"
+
+                   let img = document.createElement("img")
+                   img.innerHTML = "<br>"
+                   img.src=`${element?.images[0].url}`
+                   img.style.width = "700px"
+                   img.style.border = "2px solid black"
+                   img.style.borderRadius= "20px"
+                  
+
+                   let topic = document.createElement("h4")
+                   topic.innerHTML = `Topic :- ${element.topics[0]}`
+                   topic.style.fontSize = "30px"
+                   topic.style.color = "red"
+
+                   let publishedDateTime = document.createElement("h3")
+                   publishedDateTime.innerHTML= `publishedDateTime :- ${element.publishedDateTime}`
+                   publishedDateTime.style.color = "magenta"
+
+                   let excerpt = document.createElement("p")
+                   excerpt.innerHTML = `Excerpt :- ${element.excerpt}`
+                   excerpt.style.fontFamily = "sans-serif"
+                   excerpt.style.fontSize= "20px"
+                  
+                   let heat = document.createElement("h2")
+                   heat.innerHTML = `Heat :- ${element.heat}`
+
+                   let provider = document.createElement("p")
+                   provider.innerHTML = `Provider Name :- ${element.provider.name}<br>
+                   Provider Domain :- ${element.provider.domain}`
+                   provider.style.fontSize = "19px"
+                   provider.style.color = "crimson"
+                   provider.style.fontFamily ="Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
+
+                    div.append(  title , img , topic ,publishedDateTime,excerpt ,heat , provider);
+                    main.append(div)
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        showData()
+    </script>
+</body>
+</html>
