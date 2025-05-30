@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather API</title>
-</head>
-<body>
-    <input id="text" type="text" placeholder="Enter City Name">
-    <button id="Search">Search</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-api</title>
 
-    <div id="main"></div>
-
+  </head>
+  <body>
+    <div id="inp"> <input id="text" type="text" placeholder="Enter City Name  "/>
+    <button id="btn">search</button></div> <br><br>
+  
+    <div id="container"> </div>
     <script>
-        let para = document.querySelector("#text")
-        let btn = document.querySelector("#Search")
-        let main = document.querySelector("#main")
+      const textInput = document.getElementById("text");
+      const searchBtn = document.querySelector("#btn");
+      const container = document.getElementById("container");
 
-        const apikey = "bb3dedec65550585199789802514569c"
-        const apiurl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=gujarat`
-
-        // btn.addEventListener("click",()=>{
+      async function getData() {
+        let inputWeather = textInput.value;
+        container.innerHTML = "";
+        try {
+          const apikey = "ff785b71dfd84fcb6b6c14f23c502c1f";
       
+          let data = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${inputWeather}&appid=${apikey}`
+          );
+          let result = await data.json();
+          console.log(result);
+          let cityName = document.createElement("h2");
+          let temperature = document.createElement("p");
+          let timezone = document.createElement("p")
+          let visibility = document.createElement("p")
+          
+          cityName.innerHTML = `City Name : ${result.name}`;
+          temperature.innerText = `Temperature: ${result.main.temp}°C`;
+          temperature.style.color = "red"
+          timezone.innerHTML = `Timezone : ${result.timezone}`
+          timezone.style.color = "green"
+          visibility.innerHTML = `Visibility : ${result.visibility}`
+          visibility.style.color ="magenta"
+       
+          container.append(cityName, temperature, timezone, visibility);
+        } catch (e) {
+          console.log(e);
+        }
+      }
 
-                fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${text.value}` +`&appid=${apikey}`)
-          .then((res) => res.json())
-          .then((res) => {
-            res.forEach(element => {
-                 let paragraph = document.createElement("p")
-                 paragraph.innerHTML = element.name
-                 let paragraph1 = document.createElement("p")
-                 paragraph1.innerHTML = element.temp
-                 main.append(paragraph,paragraph1)
-                 console.log(res);
-                 text.value = "";
-          })
-        }).catch((error) => {
-            console.log(error);
-          });
-      
+      searchBtn.addEventListener("click", getData);
     </script>
-</body>
+  </body>
 </html>
