@@ -1,0 +1,30 @@
+body{
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+.form{
+    height: auto;
+    border: 2px solid black;
+    text-align: center;
+    background-color: aqua;
+    border-radius: 25px;
+    display: grid;
+    gap: 15px;   
+}
+.sub{
+    color: white;
+    background-color: black;
+    height: 25px;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+.res{  
+    color: white;
+    background-color: black;
+    height: 25px;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+}
