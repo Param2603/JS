@@ -1,30 +1,63 @@
-body{
-    background-color: aquamarine;
-    height: 100vh;
+body {
+      font-family: Arial, sans-serif;
+      background-color: wheat;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      font-weight: 900;
+      color: red;
+    }
+     
+    .task-form{
+        display: grid;
+        gap: 30px;
+    }
+    .task-form ::placeholder{
+        color: black;
+        font-weight: 700;  
+    }
+
+    .task-form, .task-list, .filter {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .task-form input, .task-form select, .task-form button {
+      margin-right: 10px;
+      padding: 10px;
+    }
+
+   /* .task {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    } 
+     .task:last-child {
+      border-bottom: none;
+    } 
+    .task span {
+      display: inline-block;
+      margin-right: 15px;
+    }  */
+
+    .priority-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
 }
 
-.form{
-    height: auto;
-    border: 2px solid black;
-    text-align: center;
-    background-color: aqua;
-    border-radius: 25px;
-    display: grid;
-    gap: 15px;   
+.priority-list li {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-.sub{
-    color: white;
-    background-color: black;
-    height: 25px;
-    width: 70px;
-    text-align: center;
-    cursor: pointer;
-}
-.res{  
-    color: white;
-    background-color: black;
-    height: 25px;
-    width: 70px;
-    text-align: center;
-    cursor: pointer;
+
+.priority-list li.selected {
+  background-color: #d0eaff;
+  font-weight: bold;
 }
