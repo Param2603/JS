@@ -10,8 +10,8 @@ body {
     }
      
     .task-form{
-        display: grid;
-        gap: 30px;
+      display: grid;
+      gap: 30px;
     }
     .task-form ::placeholder{
         color: black;
@@ -60,4 +60,8 @@ body {
 .priority-list li.selected {
   background-color: #d0eaff;
   font-weight: bold;
+}
+
+.task-list{
+  height: auto;
 }
