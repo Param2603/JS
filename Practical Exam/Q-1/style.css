@@ -1,51 +1,45 @@
 body {
-      font-family: Arial, sans-serif;
-      background-color: whitesmoke;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      font-weight: 900;
-      color: rgb(255, 138, 5);
-    }
-     
-    .task-form{
-      display: grid;
-      gap: 30px;
-      width: 700px;
-       margin: auto;
-    }
-    .task-form ::placeholder{
-        color: black;
-        font-weight: 700;  
-    }
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  padding: 20px;
+}
 
-    .task-form, .task-list, .filter {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+h1 {
+  text-align: center;
+  font-weight: 900;
+  color: rgb(255, 138, 5);
+}
 
-    .task-form input, .task-form select, .task-form button {
-      margin-right: 10px;
-      padding: 10px;
-    }
+.task-form {
+  display: grid;
+  gap: 30px;
+  width: 700px;
+  margin: auto;
+}
 
-   /* .task {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0;
-    } 
-     .task:last-child {
-      border-bottom: none;
-    } 
-    .task span {
-      display: inline-block;
-      margin-right: 15px;
-    }  */
+.task-form ::placeholder {
+  color: black;
+  font-weight: 700;
+}
 
-    .priority-list {
+.task-form,
+.task-list,
+.filter {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-form input,
+.task-form select,
+.task-form button {
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.priority-list {
   list-style: none;
   padding: 0;
   display: flex;
@@ -64,19 +58,19 @@ body {
   font-weight: bold;
 }
 
-.task-list{
+.task-list {
   height: auto;
   width: 700px;
   margin: auto;
 }
 
-button{
+button {
   cursor: pointer;
   color: black;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
-.filter{
+.filter {
   width: 700px;
   display: flex;
   justify-content: space-around;
