@@ -12,6 +12,8 @@ body {
     .task-form{
       display: grid;
       gap: 30px;
+      width: 700px;
+       margin: auto;
     }
     .task-form ::placeholder{
         color: black;
@@ -64,10 +66,20 @@ body {
 
 .task-list{
   height: auto;
+  width: 700px;
+  margin: auto;
 }
 
 button{
   cursor: pointer;
   color: black;
   font-weight: 700; 
+}
+
+.filter{
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 20px;
 }
